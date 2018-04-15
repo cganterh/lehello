@@ -1,9 +1,10 @@
 """Provide a simple greeting handler for a Le bot."""
 
-from telegram.ext import CommandHandler
+
+from telegram.ext import CommandHandler as _CommandHandler
 
 
-def hello(bot, update):
+def _hello(bot, update):
     """Greet the user using own name."""
     bot.sendMessage(
         chat_id=update.message.chat_id,
@@ -11,4 +12,4 @@ def hello(bot, update):
     )
 
 
-handler = CommandHandler('hi', hello)
+_handler = _CommandHandler('hi', _hello)
