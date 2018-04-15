@@ -12,3 +12,7 @@ _test: install
 .PHONY: report
 report: _test
 	coverage report
+
+.PHONY: sdist bdist_wheel
+sdist bdist_wheel: _test
+	python setup.py $@
