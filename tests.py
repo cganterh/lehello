@@ -6,6 +6,8 @@ from unittest import (
     TestCase,
 )
 
+from unittest.mock import MagicMock
+
 from pkg_resources import load_entry_point
 from telegram.ext import CommandHandler
 
@@ -40,6 +42,29 @@ class TestLeHelloHandler(LeHelloHandlerTestCase):
             self.handler,
             CommandHandler,
             'lehello.handler is not an instance of CommandHandler.'
+        )
+
+
+class TestLeHelloHandlerCallback(LeHelloHandlerTestCase):
+    """Test the behavior of the callback function.
+
+    This callback should send a message saying hi and including the
+    name of the bot.
+    """
+
+    def setUp(self):
+        """Set up a call to the callback."""
+        super().setUp()
+        self.bot = MagicMock()
+        self.update = MagicMock()
+        self.bot.first_name = 'cris'
+        self.handler.callback(self.bot, self.update)
+
+    def test_send_message_is_called(self):
+        """Test that bot.send_message() was called."""
+        self.bot.send_message.assert_called_with(
+            self.update.message.chat_id,
+            "Hi all, I'm {name}.".format(name='cris')
         )
 
 
