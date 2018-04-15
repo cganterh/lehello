@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "44afe20c691d5ad50dc103d0576111f67af386945a66cf213db1c474ccdb8fa4"
+            "sha256": "d04b9afdb566becd1ec9f5ba8c9060cde08ea1b9e1c799ee6d521d0ffaa009b5"
         },
         "pipfile-spec": 6,
         "requires": {},
@@ -111,6 +111,14 @@
             ],
             "version": "==2.6"
         },
+        "le": {
+            "hashes": [
+                "sha256:134864a3cbe323efbc48cf40fd7e3c9a08272cee69f01543be2194f45edf1add",
+                "sha256:cd5cd6fe61b066b598ed05706e04f62b788447a07b7d1d7d1833a123d20b9ccc"
+            ],
+            "index": "pypi",
+            "version": "==1.0.16"
+        },
         "mccabe": {
             "hashes": [
                 "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42",
@@ -151,10 +159,10 @@
         },
         "python-telegram-bot": {
             "hashes": [
-                "sha256:90ac2ff18f6217ad06330af98ba148957c55b92ae473c65b6726e6b17d3674f6",
-                "sha256:f056bee9373b2789786a20366b4c986daa0569baa75c7ca0e32729487ba939d0"
+                "sha256:580390d75a63706647962556bab69c7313bee1438411288c37f545e421498e6c",
+                "sha256:caa89c0eb1e5284ec0d02d6a9a4d6dc1b7db356c16fcde0a4472c4613b742c6e"
             ],
-            "version": "==6.1.0"
+            "version": "==10.0.1"
         },
         "requests": {
             "hashes": [
