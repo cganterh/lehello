@@ -1,0 +1,18 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				".coverage"
+			],
+			"folder_exclude_patterns":
+			[
+				"lehello.egg-info",
+				"dist",
+				"build"
+			],
+			"path": "."
+		}
+	]
+}
